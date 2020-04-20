@@ -1,0 +1,47 @@
+@font-face {
+  font-family: 'CenturyGothic';
+  src: url('./assets/fonts/CenturyGothic.ttf') format('TrueType');
+}
+@font-face {
+  font-family: 'CenturyGothicBold';
+  src: url('./assets/fonts/CenturyGothicBold.ttf') format('TrueType');
+}
+@font-face {
+  font-family: 'CenturyGothicItalic';
+  src: url('./assets/fonts/CenturyGothicItalic.ttf') format('TrueType');
+}
+@font-face {
+  font-family: 'CenturyGothicBoldItalic';
+  src: url('./assets/fonts/CenturyGothicBoldItalic.ttf') format('TrueType');
+}
+@font-face {
+  font-family: 'CenturyGothicLight';
+  src: url('./assets/fonts/CenturyGothicLight.ttf') format('TrueType');
+}
+
+@font-face {
+  @import url('https://fonts.googleapis.com/css?family=Teko&display=swap');
+  font-family: 'Teko', sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: 'CenturyGothic', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+.MuiInputBase-root {
+  font-family: 'CenturyGothic', sans-serif !important;
+}
+
+.MuiFormControl-marginNormal {
+  width: 100%;
+}
