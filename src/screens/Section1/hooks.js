@@ -1,8 +1,9 @@
 import { useState, useEffect } from 'react'
-import { getFilms } from '../../services/api'
+import { getFilms, getUniqueFilm } from '../../services/api'
 
 export const useFilms = () => {
   const [data, setData] = useState([])
+  const [film, setFilm] = useState('')
 
   useEffect(() => {
     const getData = async () => {
@@ -16,5 +17,21 @@ export const useFilms = () => {
     getData()
   }, [])
 
-  return [data]
+  const getFilm = async id => {
+    try {
+      const response = await getUniqueFilm(id)
+      setFilm(response)
+      console.log(film)
+    } catch (err) {
+      console.log(err)
+    }
+  }
+
+  const handleChange = e => {
+    const id = e.target.value
+    getFilm(id)
+    console.log(film)
+  }
+
+  return [data, film, handleChange]
 }
