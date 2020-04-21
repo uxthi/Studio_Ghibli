@@ -31,7 +31,12 @@ export const SearchArea = styled.div`
 
 export const CardsArea = styled.div`
   width: 100vw;
-  height: 55vh;
+  min-height: 55vh;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
 
   background-color: #276c8a;
 `
