@@ -1,8 +1,7 @@
 import axios from 'axios'
-import { ROOT_URL } from '../constants'
 
 const api = axios.create({
-  baseURL: ROOT_URL
+  baseURL: 'https://ghibliapi.herokuapp.com'
 })
 
 export const logout = () => {
@@ -16,9 +15,8 @@ api.interceptors.request.use(
     if (token) {
       config.headers.Authorization = token
     } else {
-      logout()
+      console.log('no token found')
     }
-
     return config
   },
   error => {
@@ -30,8 +28,23 @@ api.interceptors.response.use(
   response => response,
   error => {
     if (error.response.status === 401) {
-      logout()
+      console.log('erro 401')
     }
     return Promise.reject(error)
   }
 )
+
+//// REQUESTS
+
+// GET ALL FILMS
+export const getFilms = () => {
+  return new Promise(async (resolve, reject) => {
+    try {
+      const { data } = await api.get(`/films`)
+      resolve(data)
+    } catch (err) {
+      reject(err)
+      console.log('Error fetching films list')
+    }
+  })
+}

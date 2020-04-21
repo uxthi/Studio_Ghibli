@@ -1,8 +1,8 @@
-import { Example } from '../screens/example'
+import { Menu } from '../screens/Section1'
 
 export const routes = [
   {
     path: '/',
-    component: Example
+    component: Menu
   }
 ]
