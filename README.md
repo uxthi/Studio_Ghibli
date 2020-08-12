@@ -26,4 +26,4 @@ Your project is now running on localhost:3000! :D
 
 Thiago Fernandes – [@thiwtf](https://twitter.com/thiwtf) – thiago@spellbook.com.br
 
-[https://github.com/gamedesignbrasil](https://github.com/gamedesignbrasil/)
+[https://github.com/uxthi](https://github.com/uxthi/)
