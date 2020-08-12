@@ -4,10 +4,10 @@ const api = axios.create({
   baseURL: 'https://ghibliapi.herokuapp.com'
 })
 
-export const logout = () => {
-  localStorage.clear()
-  window.location.href = ''
-}
+// export const logout = () => {
+//   localStorage.clear()
+//   window.location.href = ''
+// }
 
 api.interceptors.request.use(
   config => {
