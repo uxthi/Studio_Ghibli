@@ -16,7 +16,7 @@
     "react-router": "5.0.1",
     "react-router-dom": "5.0.1",
     "react-scripts": "3.4.1",
-    "serialize-javascript": "^4.0.0",
+    "serialize-javascript": "^3.1.0",
     "styled-components": "5.0.0",
     "websocket-extensions": "^0.1.4"
   },
