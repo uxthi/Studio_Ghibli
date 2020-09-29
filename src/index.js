@@ -3,8 +3,6 @@ import ReactDOM from 'react-dom'
 import { AppContainer } from 'react-hot-loader'
 import { TemplateProvider } from './components/template/provider'
 import { Navigation } from './navigation'
-
-import './config'
 import './style.css'
 
 const render = () => {
