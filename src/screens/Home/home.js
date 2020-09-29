@@ -10,7 +10,7 @@ import FormControl from '@material-ui/core/FormControl'
 import MenuItem from '@material-ui/core/MenuItem'
 import InputLabel from '@material-ui/core/InputLabel'
 import { red } from '@material-ui/core/colors'
-import { Cards } from '../Cards'
+import { Cards } from '../../components/cards'
 
 const useStyles = makeStyles(theme => ({
   formControl: {
@@ -42,8 +42,8 @@ const useStyles = makeStyles(theme => ({
   }
 }))
 
-export const Menu = () => {
-  const [data, film, handleChange] = useFilms()
+export const Home = () => {
+  const [films, uniqueFilm, handleChange] = useFilms()
   const classes = useStyles()
 
   return (
@@ -58,7 +58,7 @@ export const Menu = () => {
         <FormControl className={classes.formControl}>
           <InputLabel>Studio Ghibli's movies!</InputLabel>
           <Select onChange={handleChange}>
-            {data.map(item => (
+            {films.map(item => (
               <MenuItem value={item.id}>{item.title}</MenuItem>
             ))}
           </Select>
@@ -66,13 +66,13 @@ export const Menu = () => {
         </FormControl>
       </SearchArea>
       <CardsArea>
-        {film && (
+        {uniqueFilm && (
           <Cards
-            title={film.title}
-            director={film.director}
-            producer={film.producer}
-            releaseDate={film.release_date}
-            description={film.description}
+            title={uniqueFilm.title}
+            director={uniqueFilm.director}
+            producer={uniqueFilm.producer}
+            releaseDate={uniqueFilm.release_date}
+            description={uniqueFilm.description}
           />
         )}
       </CardsArea>
