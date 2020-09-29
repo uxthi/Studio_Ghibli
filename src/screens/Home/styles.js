@@ -7,6 +7,8 @@ export const MenuWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  border-top: 5px solid #276C8A;
 `
 
 export const LogoWrapper = styled.div`
@@ -16,7 +18,7 @@ export const LogoWrapper = styled.div`
 
 export const Logo = styled.img`
   width: auto;
-  height: 30vh;
+  height: 25vh;
 `
 
 export const SearchArea = styled.div`

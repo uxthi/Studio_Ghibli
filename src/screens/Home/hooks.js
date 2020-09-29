@@ -2,16 +2,16 @@ import { useState, useEffect } from 'react'
 import { getFilms, getUniqueFilm } from '../../services/api'
 
 export const useFilms = () => {
-  const [data, setData] = useState([])
-  const [film, setFilm] = useState('')
+  const [films, setFilms] = useState([])
+  const [uniqueFilm, setUniqueFilm] = useState('')
 
   useEffect(() => {
     const getData = async () => {
       try {
         const response = await getFilms()
-        setData(response)
+        setFilms(response)
       } catch (error) {
-        console.log('Error on fetch data hook')
+        console.log('Error fetching films')
       }
     }
     getData()
@@ -20,18 +20,16 @@ export const useFilms = () => {
   const getFilm = async id => {
     try {
       const response = await getUniqueFilm(id)
-      setFilm(response)
-      console.log(film)
+      setUniqueFilm(response)
     } catch (err) {
-      console.log(err)
+      console.log('Error fecthing film by id')
     }
   }
 
   const handleChange = e => {
     const id = e.target.value
     getFilm(id)
-    console.log(film)
   }
 
-  return [data, film, handleChange]
+  return [films, uniqueFilm, handleChange]
 }
